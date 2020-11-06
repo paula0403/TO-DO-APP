@@ -41,12 +41,14 @@ class AddTask extends Component {
     maxDate = maxDate + '-12-31'
     return (
       <div className='form'>
-        <input type='text' placeholder='Dodaj zadanie' value={this.state.text} onChange={this.handleText} />
-        <input type='checkbox' id='important' value={this.state.checked} onChange={this.handleCheckbox} />
-        <label htmlFor='important'>Priorytet</label><br />
+        <input type='text' placeholder='Type a task' value={this.state.text} onChange={this.handleText} />
+
+
         <input type='date' value={this.state.date} min={this.minDate} max={maxDate} onChange={this.handleDate} />
         <br />
-        <button onClick={this.handleClick}>Dodaj</button>
+        <input type='checkbox' id='important' value={this.state.checked} onChange={this.handleCheckbox} />
+        <label htmlFor='important'>Priority</label>
+        <button onClick={this.handleClick}>Add</button>
 
       </div>
     );
